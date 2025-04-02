@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме Надії Логіки</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            font-family: 'Playfair Display', serif;
+            scroll-behavior: smooth;
+        }
+        .nav {
+            background-color: black;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            margin-top: 60px;
+        }
+        .left, .right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .left {
+            background-color: white;
+        }
+        .right {
+            background-color: #94A398;
+        }
+        .content {
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 56px;
+            font-weight: bold;
+        }
+        p.profession {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .photo img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .photo img:hover {
+            transform: scale(1.15);
+        }
+        .resume-toggle {
+            margin-top: 20px;
+            cursor: pointer;
+            color: black;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .resume-content {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+            max-width: 400px;
+        }
+    </style>
+    <script>
+        function toggleResume() {
+            var resume = document.getElementById("resume-content");
+            if (resume.style.display === "none" || resume.style.display === "") {
+                resume.style.display = "block";
+            } else {
+                resume.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <a href="#about">Про мене</a>
+        <a href="#resume">Резюме</a>
+        <a href="#contacts">Контакти</a>
+    </div>
+    <div class="container" id="about">
+        <div class="left">
+            <div class="content">
+                <h1>Ігор Логіка</h1>
+                <p class="profession">Фронтенд-розробник</p>
+                <p><strong>Телефон:</strong> +38 096 097 49 88</p>
+                <p><strong>Email:</strong> info@mysite.ua</p>
+                <p><strong>Адреса:</strong> м. Вараш, Україна</p>
+                <p><a href="#">LinkedIn</a> • <a href="#">Facebook</a> • <a href="#">Twitter</a></p>
+                <p class="resume-toggle" onclick="toggleResume()">Повне резюме ↓</p>
+                <div id="resume-content" class="resume-content">
+                    <p>Досвід роботи:</p>
+                    <ul>
+                        <li>Фронтенд-розробник в компанії Logika (2025)</li>
+                        <li>Розробник інтерфейсів для веб-додатків</li>
+                        <li>Досвід роботи з HTML, CSS, JavaScript, React</li>
+                    </ul>
+                    <p>Освіта:</p>
+                    <ul>
+                        <li>-</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right" id="resume">
+            <div class="photo">
+                <img src="https://zn.ua/img/forall/u/0/-1/users/Mar2017/170648.jpg" alt="Надія Логіка">
+            </div>
+        </div>
+    </div>
+    <div id="contacts" style="padding: 50px; text-align: center; background: #ddd;">
+        <h2>Контакти</h2>
+        <p>Email: info@mysite.ua</p>
+        <p>Телефон: +38 096 097 49 88</p>
+    </div>
+</body>
+</html>
